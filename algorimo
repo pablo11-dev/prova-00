@@ -1,0 +1,45 @@
+from classe import *
+import os
+
+def main():
+    pass
+    list = ToDoList("Ir ao mercado","Passear com o cachorro","Estudar para a prova")
+
+    sair = False
+    while sair == False:
+        try:
+            os.system("cls")
+            
+            print("---MENU---")
+            print("Adicionar tarefa")
+            print("Excluir tarefa")
+            print("listar tarefa")
+
+            menu = int(input("Digite qual opção deseja:"))
+
+            os.system("pause")
+        
+
+            match menu:
+                case 1:
+                    os.system("cls")
+                    print("Informe a tarefa que quer adicionar:")
+                    input(">>")
+
+                case 2:
+                    os.system("cls")
+                    print("Informe a tarefa que deseja remover:")
+                    input(">>")
+                case 3:
+                    print("Essas são as tarefas:")
+                    print(f"")
+                    list.listar_tarefas
+                    
+                    
+
+        except Exception as erro:
+            print("Valor invalido")
+            print(erro.__class__.__name__)
+
+            
+        
